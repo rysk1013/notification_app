@@ -70,6 +70,38 @@ main {
   width: 300px;
 }
 
+.form-container {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.form-heading {
+  margin-left: 15px;
+}
+
+.post-form-wrapper {
+  background-color: #0081c2;
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.post-form-wrapper label {
+  display: none;
+}
+
+.post-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.post-submit {
+  display: block;
+  padding: 3px 5px;
+  margin-left: auto;
+}
+
 /* 投稿一覧 */
 .posts-wrapper {
   background-color: #0081c2;
