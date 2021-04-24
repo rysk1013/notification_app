@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
+    @posts = Post.includes(:user).order(created_at: :desc)
   end
 
   def create
@@ -8,6 +9,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path
     else
+      @posts = Post.includes(:user).order(created_at: :desc)
       render :index
     end
   end
