@@ -109,12 +109,10 @@ main {
 .post {
   background-color: #eefef9;
   width: 80%;
-  height: 150px;
   padding: 10px 20px 4px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .post:not(:last-of-type) {
@@ -124,7 +122,6 @@ main {
 .post-upper {
   display: flex;
   justify-content: space-between;
-  height: 70%;
 }
 
 .post-img {
@@ -132,14 +129,22 @@ main {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  align-self: center;
 }
 
-.text {
+.text-box {
   width: 80%;
 }
 
+.user-nickname {
+  padding: 0 10px;
+}
+
+.text {
+  height: 83%;
+}
+
 .text p {
+  height: 100%;
   padding: 10px;
 }
 
