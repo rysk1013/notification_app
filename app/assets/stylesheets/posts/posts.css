@@ -1,9 +1,3 @@
-/* 全体 */
-* {
-  margin: 0%;
-  box-sizing: border-box;
-}
-
 /* ヘッダー */
 header {
   width: 100vw;
@@ -72,11 +66,7 @@ main {
 
 .form-container {
   width: 100%;
-  padding: 10px 0;
-}
-
-.form-heading {
-  margin-left: 15px;
+  padding: 20px 0;
 }
 
 .post-form-wrapper {
@@ -87,19 +77,24 @@ main {
 }
 
 .post-form-wrapper label {
-  display: none;
+  font-size: 20px;
 }
 
 .post-textarea {
+  background-color: #fff;
   width: 100%;
   padding: 10px;
+  margin: 10px 0;
   font-size: 15px;
+  border: 1px solid #333;
 }
 
 .post-submit {
+  background-color: #ddd;
   display: block;
   padding: 3px 5px;
   margin-left: auto;
+  border: 1px solid #333;
 }
 
 /* 投稿一覧 */
@@ -113,12 +108,10 @@ main {
 .post {
   background-color: #eefef9;
   width: 80%;
-  height: 150px;
   padding: 10px 20px 4px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .post:not(:last-of-type) {
@@ -128,7 +121,7 @@ main {
 .post-upper {
   display: flex;
   justify-content: space-between;
-  height: 70%;
+  margin-bottom: 15px;
 }
 
 .post-img {
@@ -136,21 +129,26 @@ main {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  align-self: center;
 }
 
-.text {
+.text-box {
   width: 80%;
 }
 
+.user-nickname {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
 .text p {
+  height: 100%;
   padding: 10px;
 }
 
-.likes a {
+.likes span {
   display: inline-block;
   padding: 4px;
-  margin-left: 25px;
+  margin-left: 13px;
 }
 
 /* フッター */
