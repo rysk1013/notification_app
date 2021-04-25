@@ -149,7 +149,7 @@ main {
   padding: 10px;
 }
 
-.likes a {
+.likes span {
   display: inline-block;
   padding: 4px;
   margin-left: 25px;
