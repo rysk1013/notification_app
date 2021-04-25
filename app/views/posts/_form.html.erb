@@ -1,10 +1,7 @@
   <div class="form-container">
-    <div class="form-heading">
-      <h3>投稿する</h3>
-    </div>
     <%= form_with  model: @post, local: true do |f| %>
       <div class="post-form-wrapper">
-        <%= f.label :text %>
+        <%= f.label :text, "投稿する" %>
         <%= f.text_area :text, rows: "6", class: "post-textarea" %>
         <%= f.submit "投稿", class: "post-submit" %>
       </div>
