@@ -48,6 +48,7 @@ header {
 main {
   background-color: #1ed4ce;
   width: 100vw;
+  min-height: calc(100vh - 180px);
   padding: 30px 0;
 }
 
@@ -62,6 +63,7 @@ main {
 .side-bar {
   background-color: #b8fde7;
   width: 300px;
+  min-height: calc(100vh - 240px);
 }
 
 .form-container {
@@ -101,6 +103,7 @@ main {
 .posts-wrapper {
   background-color: #0081c2;
   width: calc(100% - 300px);
+  min-height: calc(100% - 240px);
   padding: 20px 0;
 }
 
@@ -149,6 +152,88 @@ main {
   display: inline-block;
   padding: 4px;
   margin-left: 13px;
+}
+
+/* 投稿詳細 */
+.comments-wrapper {
+  background-color: #eefef9;
+  width: 80%;
+  min-height: 250px;
+  padding: 10px 20px 4px;
+  margin: 0 auto;
+}
+
+.comment {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.comment-img {
+  background-color: #87cefa;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment-box span {
+  display: block;
+  margin: 0 0 8px 10px;
+  font-size: 13px;
+}
+
+.comment-box p {
+  background-color: #00ff7f;
+  padding: 10px;
+  margin-left: 20px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.comment-box p::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-top: 9px solid transparent;
+  border-right: 13px solid #00ff7f;
+  border-bottom: 9px solid transparent;
+  border-left: 9px solid transparent;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -22px;
+}
+
+.self {
+  flex-direction: row-reverse;
+}
+
+.self span {
+  margin: 0 10px 8px 0;
+  text-align: right;
+}
+
+.self p {
+  margin: 0 20px 0 0;
+  position: relative;
+}
+
+.self p::before {
+  display: none;
+}
+
+.self p::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-top: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 13px solid #00ff7f;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: -22px;
 }
 
 /* フッター */
