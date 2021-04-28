@@ -32,7 +32,7 @@
         <div class="post-lower">
           <div class="likes">
             <% if @already_liked.present? && @already_liked.user_id == current_user.id %>
-              <span><%= link_to "Cancel likes: " %></span>
+              <span><%= link_to "Cancel likes: ", post_like_path(@post, @already_liked), method: :delete %></span>
             <% else %>
               <span><%= link_to "Add likes: ", post_likes_path(@post), method: :post %></span>
             <% end %>
