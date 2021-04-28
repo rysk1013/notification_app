@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @posts = Post.includes(:user).order(created_at: :desc)
+    @likes = Like.includes(:post).count
   end
 
   def create

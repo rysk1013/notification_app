@@ -14,7 +14,7 @@
   </div>
   <div class="post-lower">
     <div class="likes">
-      <span>likes: 0</span>
+      <span>likes: <%= post.likes.count %></span>
     </div>
     <div class="more">
       <%= link_to "show", post_path(post) %>
