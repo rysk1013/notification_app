@@ -148,10 +148,20 @@ main {
   padding: 10px;
 }
 
+.post-lower {
+  display: flex;
+  justify-content: space-between;
+}
+
 .likes span {
   display: inline-block;
   padding: 4px;
   margin-left: 13px;
+}
+
+.more a {
+  display: inline-block;
+  padding: 4px;
 }
 
 /* 投稿詳細 */
