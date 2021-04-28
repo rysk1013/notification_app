@@ -1,6 +1,8 @@
 <header>
   <div class="header-wrapper">
-    <div class="header-logo"></div>
+    <%= link_to root_path do %>
+      <div class="header-logo"></div>
+    <% end %>
     <div class="header-nav">
       <ul class="header-lists">
         <% if user_signed_in? %>
