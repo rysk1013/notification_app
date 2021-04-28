@@ -35,7 +35,7 @@
           </div>
           <div class="edit">
             <% if user_signed_in? && current_user.id == @post.user_id %>
-              <%= link_to "destroy" %>
+              <%= link_to "destroy", post_path(@post), method: :delete %>
               <%= link_to "edit", edit_post_path(@post) %>
             <% end %>
           </div>
