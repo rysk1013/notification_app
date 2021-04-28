@@ -148,6 +148,11 @@ main {
   padding: 10px;
 }
 
+.post-lower {
+  display: flex;
+  justify-content: space-between;
+}
+
 .likes span {
   display: inline-block;
   padding: 4px;
@@ -155,6 +160,17 @@ main {
 }
 
 /* 投稿詳細 */
+.more a {
+  display: inline-block;
+  padding: 4px;
+}
+
+.edit a {
+  display: inline-block;
+  padding: 4px;
+  margin-left: 10px;
+}
+
 .comments-wrapper {
   background-color: #eefef9;
   width: 80%;

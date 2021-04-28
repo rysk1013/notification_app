@@ -7,7 +7,7 @@
       </div>
       <div class="text">
         <p>
-        <%= post.text %>
+          <%= post.text %>
         </p>
       </div>
     </div>
@@ -15,6 +15,9 @@
   <div class="post-lower">
     <div class="likes">
       <span>likes: 0</span>
+    </div>
+    <div class="more">
+      <%= link_to "show", post_path(post) %>
     </div>
   </div>
 </div>
