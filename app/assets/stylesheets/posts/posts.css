@@ -159,12 +159,18 @@ main {
   margin-left: 13px;
 }
 
+/* 投稿詳細 */
 .more a {
   display: inline-block;
   padding: 4px;
 }
 
-/* 投稿詳細 */
+.edit a {
+  display: inline-block;
+  padding: 4px;
+  margin-left: 10px;
+}
+
 .comments-wrapper {
   background-color: #eefef9;
   width: 80%;
