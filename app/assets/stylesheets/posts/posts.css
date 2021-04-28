@@ -252,6 +252,20 @@ main {
   right: -22px;
 }
 
+/* 投稿編集 */
+.back-btn {
+  background-color: #b9fde8;
+  width: 150px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  margin: 70px auto 0;
+}
+
+.back-btn a {
+  display: block;
+}
+
 /* フッター */
 footer {
   background-color: #000;
