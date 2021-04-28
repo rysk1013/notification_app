@@ -155,8 +155,11 @@ main {
 
 .likes span {
   display: inline-block;
+}
+
+.likes a {
+  display: block;
   padding: 4px;
-  margin-left: 13px;
 }
 
 /* 投稿詳細 */

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @posts = Post.includes(:user).order(created_at: :desc)
+    @likes = Like.includes(:post).count
   end
 
   def create
@@ -17,6 +18,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @already_liked = Like.find_by(post_id: @post.id, user_id: current_user.id) if user_signed_in?
   end
 
   def edit
