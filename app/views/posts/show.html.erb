@@ -8,7 +8,7 @@
           <div class="post-form-wrapper">
             <%= f.label :text, "コメントする" %>
             <%= f.text_area :text, rows: "6", class: "post-textarea" %>
-            <%= f.submit "投稿", class: "post-submit" %>
+            <%= f.submit "送信", class: "post-submit" %>
           </div>
         <% end %>
       </div>
@@ -34,8 +34,10 @@
             <span>likes: 0</span>
           </div>
           <div class="edit">
-            <%= link_to "edit", edit_post_path(@post) %>
-            <%= link_to "destroy" %>
+            <% if user_signed_in? && current_user.id == @post.user_id %>
+              <%= link_to "destroy" %>
+              <%= link_to "edit", edit_post_path(@post) %>
+            <% end %>
           </div>
         </div>
       </div>
