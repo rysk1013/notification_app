@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @already_liked = Like.find_by(post_id: @post.id, user_id: current_user.id)
+    @already_liked = Like.find_by(post_id: @post.id, user_id: current_user.id) if user_signed_in?
   end
 
   def edit
