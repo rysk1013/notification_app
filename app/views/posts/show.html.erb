@@ -31,7 +31,12 @@
         </div>
         <div class="post-lower">
           <div class="likes">
-            <span>likes: 0</span>
+            <% if @already_liked.present? && @already_liked.user_id == current_user.id %>
+              <span><%= link_to "Cancel likes: " %></span>
+            <% else %>
+              <span><%= link_to "Add likes: ", post_likes_path(@post), method: :post %></span>
+            <% end %>
+            <span><%= @post.likes.count %></span>
           </div>
           <div class="edit">
             <% if user_signed_in? && current_user.id == @post.user_id %>
