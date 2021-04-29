@@ -197,8 +197,11 @@ main {
 
 .comment-box span {
   display: block;
-  margin: 0 0 8px 10px;
   font-size: 13px;
+}
+
+.comment-box span:last-child {
+  text-align: right;
 }
 
 .comment-box p {
@@ -228,8 +231,11 @@ main {
 }
 
 .self span {
-  margin: 0 10px 8px 0;
   text-align: right;
+}
+
+.self span:last-child {
+  text-align: left;
 }
 
 .self p {
