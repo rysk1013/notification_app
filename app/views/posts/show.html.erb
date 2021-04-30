@@ -4,7 +4,7 @@
   <div class="container">
     <div class="side-bar">
       <div class="form-container">
-        <%= form_with local: true do |f| %>
+        <%= form_with model: [@post, @comment], local: true do |f| %>
           <div class="post-form-wrapper">
             <%= f.label :text, "コメントする" %>
             <%= f.text_area :text, rows: "6", class: "post-textarea" %>

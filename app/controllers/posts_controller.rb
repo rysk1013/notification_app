@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def show
     @already_liked = Like.find_by(post_id: @post.id, user_id: current_user.id) if user_signed_in?
+    @comment = Comment.new
   end
 
   def edit
