@@ -200,6 +200,10 @@ main {
   font-size: 13px;
 }
 
+.comment-box span:first-child {
+  padding-left: 20px;
+}
+
 .comment-box span:last-child {
   text-align: right;
 }
@@ -232,6 +236,7 @@ main {
 
 .self span {
   text-align: right;
+  padding-right: 25px;
 }
 
 .self span:last-child {
