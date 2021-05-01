@@ -49,50 +49,29 @@
 
       <div class="comments-wrapper">
         <div class="comments">
-          <div class="comment">
-            <div class="comment-img"></div>
-            <div class="comment-box">
-              <span>ユーザー名</span>
-              <p>コメントコメント</p>
-              <span>2021/01/01</span>
-            </div>
-          </div>
-
-          <div class="comment">
-            <div class="comment-img"></div>
-            <div class="comment-box">
-              <span>ユーザー名</span>
-              <p>コメントコメント</p>
-              <span>2021/01/01</span>
-            </div>
-          </div>
-
-          <div class="comment self">
-            <div class="comment-img"></div>
-            <div class="comment-box">
-              <span>ユーザー名</span>
-              <p>コメントコメント</p>
-              <span>2021/01/01</span>
-            </div>
-          </div>
-
-          <div class="comment">
-            <div class="comment-img"></div>
-            <div class="comment-box">
-              <span>ユーザー名</span>
-              <p>コメントコメント</p>
-              <span>2021/01/01</span>
-            </div>
-          </div>
-
-          <div class="comment self">
-            <div class="comment-img"></div>
-            <div class="comment-box">
-              <span>ユーザー名</span>
-              <p>コメントコメント</p>
-              <span>2021/01/01</span>
-            </div>
-          </div>
+          <% @comments.each do |comment| %>
+            <% if @post.id == comment.post_id %>
+              <% if @post.user_id != comment.user_id %>
+                <div class="comment">
+                  <div class="comment-img"></div>
+                  <div class="comment-box">
+                    <span><%= comment.user.nickname %></span>
+                    <p><%= comment.text %></p>
+                    <span><%= comment.created_at %></span>
+                  </div>
+                </div>
+              <% else %>
+                <div class="comment self">
+                  <div class="comment-img"></div>
+                  <div class="comment-box">
+                    <span><%= comment.user.nickname %></span>
+                    <p><%= comment.text %></p>
+                    <span><%= comment.created_at %></span>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          <% end %>
         </div>
       </div>
 
