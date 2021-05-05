@@ -10,7 +10,7 @@
             <%= link_to current_user.nickname %>
           </li>
           <li class="header-list">
-            <%= link_to "お知らせ" %>
+            <%= link_to "お知らせ", notifications_path %>
           </li>
           <li class="header-list">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
