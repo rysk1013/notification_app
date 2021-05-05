@@ -1,0 +1,21 @@
+/* 通知一覧 */
+.notifications-wrapper {
+  background-color: #0081c2;
+  width: calc(100% - 300px);
+  min-height: calc(100% - 240px);
+  padding: 20px 0;
+}
+
+/* 通知 */
+.notification {
+  background-color: #eefef9;
+  width: 80%;
+  min-height: 70px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70px;
+}
+
+.notification:not(:last-of-type) {
+  margin-bottom: 30px;
+}
