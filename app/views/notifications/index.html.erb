@@ -9,7 +9,14 @@
     <div class="notifications-wrapper">
       <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
       <% if notifications.exists? %>
-        <%= render 'notification' %>
+        <% notifications.each do |notification| %>
+          <% visitor = notification.visitor %>
+          <div class="notification">
+            <p>
+              <%= visitor.nickname %>さんがあなたの投稿にコメントしました。
+            </p>
+          </div>
+        <% end %>
       <% else %>
         <div class="notification">
           <p>通知はありません</p>
