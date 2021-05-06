@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
   resources :notifications, only: [:index]
+  post 'notifications/reset', to: 'notifications#reset'
 end

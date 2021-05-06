@@ -19,3 +19,17 @@
 .notification:not(:last-of-type) {
   margin-bottom: 30px;
 }
+
+/* 既読ボタン */
+.reset-notifications {
+  background-color: #eefef9;
+  width: 150px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  margin: 70px auto 0;
+}
+
+.reset-notifications a {
+  display: block;
+}
