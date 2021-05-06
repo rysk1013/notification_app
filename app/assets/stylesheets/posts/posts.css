@@ -44,6 +44,15 @@ header {
   text-decoration: none;
 }
 
+.notifications {
+  background-color: yellow;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
 /* メイン */
 main {
   background-color: #1ed4ce;
