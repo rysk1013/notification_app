@@ -4,7 +4,6 @@
   <div class="container">
     <div class="side-bar">
 
-      
     </div>
     <div class="notifications-wrapper">
       <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
@@ -20,6 +19,12 @@
       <% else %>
         <div class="notification">
           <p>通知はありません</p>
+        </div>
+      <% end %>
+
+      <% if unchecked_notifications.any? %>
+        <div class="reset-notifications">
+            <%= link_to "既読にする", notifications_reset_path, method: :post %>
         </div>
       <% end %>
     </div>
