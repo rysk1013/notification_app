@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
     if @comment.save
       @post.create_notification_comment!(current_user, @comment.id)
       redirect_to post_path(@post)
+    else
+      redirect_back(fallback_location: root_path)
     end
   end
 
