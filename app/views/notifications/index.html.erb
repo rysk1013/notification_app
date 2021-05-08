@@ -12,7 +12,11 @@
           <% visitor = notification.visitor %>
           <div class="notification">
             <p>
-              <%= visitor.nickname %>さんがあなたの投稿にコメントしました。
+              <% if notification.action == 'comment' %>
+                <%= visitor.nickname %>さんがあなたの投稿にコメントしました。
+              <% elsif notification.action == 'like' %>
+                <%= visitor.nickname %>さんがあなたの投稿にlikeしました。
+              <% end %>
             </p>
           </div>
         <% end %>
